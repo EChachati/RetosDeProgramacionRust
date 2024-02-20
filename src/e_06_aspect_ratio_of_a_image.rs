@@ -23,11 +23,15 @@ fn get_gcf(a: u32, b: u32) -> u32 {
     return get_gcf(b, a % b);
 }
 
+pub fn get_ratio(width: u32, height: u32) -> String {
+    let gcf = get_gcf(width, height);
+    let ratio = format!("{}:{}", width / gcf, height / gcf);
+    return ratio;
+}
+
 pub fn aspect_ratio_of_image(image: DynamicImage) -> String {
     let width = image.width();
     let height = image.height();
 
-    let gcf = get_gcf(width, height);
-    let ratio = format!("{}:{}", width / gcf, height / gcf);
-    return ratio;
+    return get_ratio(width, height);
 }

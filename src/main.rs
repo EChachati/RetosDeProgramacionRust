@@ -4,6 +4,7 @@ mod e_03_fibonacci;
 mod e_04_is_prime_number;
 mod e_05_area_of_a_polygon;
 mod e_06_aspect_ratio_of_a_image;
+mod e_07_reverse_strings;
 
 fn space_between_exercises() {
     println!("\n\n");
@@ -107,5 +108,21 @@ fn main() {
     println!(
         "Aspect ratio of image: {}",
         e_06_aspect_ratio_of_a_image::aspect_ratio_of_image(image)
+    );
+    println!(
+        "Aspect ratio of 1920x1080: {}",
+        e_06_aspect_ratio_of_a_image::get_ratio(1920, 1080)
+    );
+
+    println!(
+        "Crea un programa que invierta el orden de una cadena de texto
+        sin usar funciones propias del lenguaje que lo hagan de forma automática.
+        - Si le pasamos \"Hola mundo\" nos retornaría \"odnum aloH\"
+        "
+    );
+
+    println!(
+        "Reverse string: {}",
+        e_07_reverse_strings::reverse_string("Hola mundo")
     );
 }
