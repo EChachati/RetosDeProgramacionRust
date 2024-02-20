@@ -6,6 +6,8 @@ mod e_05_area_of_a_polygon;
 mod e_06_aspect_ratio_of_a_image;
 mod e_07_reverse_strings;
 mod e_08_counting_words;
+mod e_09_transform_to_binary;
+
 fn space_between_exercises() {
     println!("\n\n");
 }
@@ -43,7 +45,7 @@ fn main() {
         Hecho esto, imprime los números primos entre 1 y 100.
         "
     );
-    for i in 1..101 {
+    for i in 1..21 {
         println!(
             "{} is prime: {}",
             i,
@@ -141,4 +143,17 @@ fn main() {
 
     let text = "Hola mundo, hola mundo, hola mundo. que tal";
     println!("Count words: {:?}", e_08_counting_words::count_words(text));
+
+    space_between_exercises();
+    println!(
+        "Crea un programa se encargue de transformar un número
+        decimal a binario sin utilizar funciones propias del lenguaje que lo hagan directamente."
+    );
+
+    let decimal = 10;
+    println!(
+        "Decimal to binary: {} -> {}",
+        decimal,
+        e_09_transform_to_binary::decimal_to_binary(decimal)
+    );
 }
