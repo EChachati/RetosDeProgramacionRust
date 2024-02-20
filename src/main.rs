@@ -5,7 +5,7 @@ mod e_04_is_prime_number;
 mod e_05_area_of_a_polygon;
 mod e_06_aspect_ratio_of_a_image;
 mod e_07_reverse_strings;
-
+mod e_08_counting_words;
 fn space_between_exercises() {
     println!("\n\n");
 }
@@ -114,6 +114,8 @@ fn main() {
         e_06_aspect_ratio_of_a_image::get_ratio(1920, 1080)
     );
 
+    space_between_exercises();
+
     println!(
         "Crea un programa que invierta el orden de una cadena de texto
         sin usar funciones propias del lenguaje que lo hagan de forma automática.
@@ -125,4 +127,18 @@ fn main() {
         "Reverse string: {}",
         e_07_reverse_strings::reverse_string("Hola mundo")
     );
+
+    space_between_exercises();
+    println!(
+        "Crea un programa que cuente cuantas veces se repite cada palabra
+        y que muestre el recuento final de todas ellas.
+        - Los signos de puntuación no forman parte de la palabra.
+        - Una palabra es la misma aunque aparezca en mayúsculas y minúsculas.
+        - No se pueden utilizar funciones propias del lenguaje que
+          lo resuelvan automáticamente.
+        "
+    );
+
+    let text = "Hola mundo, hola mundo, hola mundo. que tal";
+    println!("Count words: {:?}", e_08_counting_words::count_words(text));
 }
