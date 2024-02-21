@@ -10,7 +10,7 @@ mod e_09_transform_to_binary;
 mod e_10_morse_code;
 mod e_11_balanced_expressions;
 mod e_12_delete_characters;
-
+mod e_13_is_palindrome;
 fn space_between_exercises() {
     println!("\n\n");
 }
@@ -218,4 +218,18 @@ fn main() {
         "Delete characters: {:?}",
         e_12_delete_characters::delete_characters(str1, str2)
     );
+
+    space_between_exercises();
+    println!(
+        "Escribe una función que reciba un texto y retorne verdadero o
+        falso (Boolean) según sean o no palíndromos.
+        - Un Palíndromo es una palabra o expresión que es igual si se lee
+          de izquierda a derecha que de derecha a izquierda.
+        - NO se tienen en cuenta los espacios, signos de puntuación y tildes.
+        - Ejemplo: Ana lleva al oso la avellana.
+        "
+    );
+
+    let text = "Ana lleva al oso la avellana";
+    println!("Is palindrome: {}", e_13_is_palindrome::is_palindrome(text));
 }
