@@ -9,6 +9,7 @@ mod e_08_counting_words;
 mod e_09_transform_to_binary;
 mod e_10_morse_code;
 mod e_11_balanced_expressions;
+mod e_12_delete_characters;
 
 fn space_between_exercises() {
     println!("\n\n");
@@ -198,5 +199,23 @@ fn main() {
     println!(
         "Balance expression: {}",
         e_11_balanced_expressions::balance_expression("{ a * ( c + d ) ] - 5 }")
+    );
+
+    space_between_exercises();
+    println!(
+        "Crea una función que reciba dos cadenas como parámetro (str1, str2)
+        e imprima otras dos cadenas como salida (out1, out2).
+        - out1 contendrá todos los caracteres presentes en la str1 pero NO
+          estén presentes en str2.
+        - out2 contendrá todos los caracteres presentes en la str2 pero NO
+          estén presentes en str1.
+        "
+    );
+
+    let str1 = "hola mundo";
+    let str2 = "hola";
+    println!(
+        "Delete characters: {:?}",
+        e_12_delete_characters::delete_characters(str1, str2)
     );
 }
