@@ -8,6 +8,7 @@ mod e_07_reverse_strings;
 mod e_08_counting_words;
 mod e_09_transform_to_binary;
 mod e_10_morse_code;
+mod e_11_balanced_expressions;
 
 fn space_between_exercises() {
     println!("\n\n");
@@ -175,5 +176,27 @@ fn main() {
     println!(
         "Translate to morse: {}",
         e_10_morse_code::translate_to_morse(text)
+    );
+
+    space_between_exercises();
+    println!(
+        "Crea un programa que comprueba si los paréntesis, llaves y corchetes
+        de una expresión están equilibrados.
+        - Equilibrado significa que estos delimitadores se abren y cierran
+          en orden y de forma correcta.
+        - Paréntesis, llaves y corchetes son igual de prioritarios.
+        - No hay uno más importante que otro.
+        - Expresión balanceada: {{ [ a * ( c + d ) ] - 5 }}
+        - Expresión no balanceada: {{ a * ( c + d ) ] - 5 }}
+        "
+    );
+    println!(
+        "Balance expression: {}",
+        e_11_balanced_expressions::balance_expression("{ [ a * ( c + d ) ] - 5 }")
+    );
+
+    println!(
+        "Balance expression: {}",
+        e_11_balanced_expressions::balance_expression("{ a * ( c + d ) ] - 5 }")
     );
 }
