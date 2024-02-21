@@ -11,6 +11,8 @@ mod e_10_morse_code;
 mod e_11_balanced_expressions;
 mod e_12_delete_characters;
 mod e_13_is_palindrome;
+mod e_14_recursive_factorial;
+
 fn space_between_exercises() {
     println!("\n\n");
 }
@@ -232,4 +234,16 @@ fn main() {
 
     let text = "Ana lleva al oso la avellana";
     println!("Is palindrome: {}", e_13_is_palindrome::is_palindrome(text));
+
+    space_between_exercises();
+    println!(
+        "Escribe una función que calcule y retorne el factorial de un número dado
+        de forma recursiva."
+    );
+
+    let n = 5;
+    println!(
+        "Recursive factorial of 5: {}",
+        e_14_recursive_factorial::recursive_factorial(n)
+    );
 }
