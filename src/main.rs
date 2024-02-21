@@ -7,6 +7,7 @@ mod e_06_aspect_ratio_of_a_image;
 mod e_07_reverse_strings;
 mod e_08_counting_words;
 mod e_09_transform_to_binary;
+mod e_10_morse_code;
 
 fn space_between_exercises() {
     println!("\n\n");
@@ -155,5 +156,24 @@ fn main() {
         "Decimal to binary: {} -> {}",
         decimal,
         e_09_transform_to_binary::decimal_to_binary(decimal)
+    );
+
+    space_between_exercises();
+    println!(
+        "Crea un programa que sea capaz de transformar texto natural a código
+        morse y viceversa.
+        - Debe detectar automáticamente de qué tipo se trata y realizar
+          la conversión.
+        - En morse se soporta raya \"—\", punto \".\", un espacio \" \" entre letras
+          o símbolos y dos espacios entre palabras \"  \".
+        - El alfabeto morse soportado será el mostrado en
+          https://es.wikipedia.org/wiki/Código_morse.
+        "
+    );
+
+    let text = "Hola mundo";
+    println!(
+        "Translate to morse: {}",
+        e_10_morse_code::translate_to_morse(text)
     );
 }
